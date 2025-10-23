@@ -18,7 +18,8 @@ public class Usuario {
     @Column(name = "id_usuario")
     private Long idUsuario;
 
-    @Column(name = "user", nullable = false, unique = true, length = 20)
+    // CAMBIO: Agregamos comillas invertidas para escapar la palabra reservada "user"
+    @Column(name = "`user`", nullable = false, unique = true, length = 20)
     private String user;
 
     @Column(name = "clave", nullable = false, length = 100)
